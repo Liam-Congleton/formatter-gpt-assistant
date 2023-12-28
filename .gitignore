@@ -4,11 +4,13 @@
 test-request.bat
 #Ignore the test file
 test1.pdf
+test1.txt
 # Common directories to ignore
 node_modules/
 vendor/
 dist/
 build/
+.vscode/
 
 # System files
 .DS_Store

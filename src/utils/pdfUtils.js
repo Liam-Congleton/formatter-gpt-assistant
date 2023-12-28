@@ -1,11 +1,12 @@
 import { PDFDocument, PDFPage } from 'pdf-lib';
-import pdf from 'pdf-parse';
+import pdf from 'pdf-parse/lib/pdf-parse.js'
 import fs from 'fs';
+import path from 'path'; // import the path module
 
 //allows for the pdf to be passed in as an argument from the command line
 let pdfPath = process.argv[2];
 getPDFDimensions(pdfPath);
-extractTextFromPdf(pdfPath, '../../test_files');
+extractTextFromPdf(pdfPath, '../../test_output');
 
 
 //need to account for edge cases such as different sized pages in the pdf
@@ -20,14 +21,13 @@ async function getPDFDimensions(pdfPath) {
   console.log(`Width: ${width}, Height: ${height}`);
 }
 
- 
+
 //This function will take in a pdf file and return the text of pages in the pdf
  function extractTextFromPdf(pdfFilePath, outputDir) {
     let dataBuffer = fs.readFileSync(pdfFilePath);
 
     pdf(dataBuffer).then(function(data) {
-        let outputFilePath = pdfPath.join(outputDir, pdfPath.basename(pdfFilePath, '.pdf') + '.txt');
+        let outputFilePath = path.join(outputDir, path.basename(pdfFilePath, '.pdf') + '.txt'); // use path.basename
         fs.writeFileSync(outputFilePath, data.text);
     });
 }
-
