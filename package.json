@@ -8,6 +8,7 @@
     "start": "node src/main.js"
   },
   "dependencies": {
-    "openai": "^4.0.0"
+    "openai": "^4.0.0",
+    "pdf-lib": "^1.17.1"
   }
 }
