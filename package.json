@@ -2,10 +2,10 @@
   "name": "formatter-gpt-assistant",
   "version": "1.0.0",
   "description": "A GPT-3 based chat assistant",
-  "main": "openai-test.js",
+  "main": "src/main.js",
   "type": "module",
   "scripts": {
-    "start": "node openai-test.js"
+    "start": "node src/main.js"
   },
   "dependencies": {
     "openai": "^4.0.0"

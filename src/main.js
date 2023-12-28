@@ -1,26 +1,14 @@
-import OpenAI from 'openai';
+// src/main.js
 import readline from 'readline';
-//import AHF-functions from 'AHF-functions'
+import openai from './api/openai.js';
+import { positiveKeywords, negativeKeywords } from './utils/keywords.js';
+import functionPositiveResponse from './responses/positiveResponse.js';
+import functionNegativeResponse from './responses/negativeResponse.js';
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
-
-const positiveKeywords = ["success", "happy", "good"];
-const negativeKeywords = ["fail", "apple", "bad"];
-
-function functionPositiveResponse() {
-  console.log("Positive response function called!");
-}
-
-function functionNegativeResponse() {
-  console.log("Negative response function called!");
-}
 
 async function askGPT3(question) {
   try {
