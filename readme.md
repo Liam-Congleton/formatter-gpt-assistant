@@ -1,4 +1,4 @@
-FormatFlexPro (Name TBD)
+Formatter-GPT-Assistant (Name TBD)
 Welcome to Formatter-GPT-Assistant (name to be determined), is an intended solution for creating XSL-FO documents with Antenna House Formatter using LLMs and a semantic interface. This project, currently in its conceptual phase, aims to format and covert existing PDFs through a GPT-powered chatbot interface.
 
 Intended Features
