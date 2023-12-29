@@ -1,8 +1,8 @@
 {
   "name": "formatter-gpt-assistant",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A GPT-3 based chat assistant",
-  "main": "src/main.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "start": "node src/main.js"
