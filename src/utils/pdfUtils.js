@@ -25,7 +25,7 @@ async function getPDFDimensions(pdfPath) {
 
 
 //This function will take in a pdf file and return the text of pages in the pdf
-async function extractTextFromPdf(pdfFilePath, outputDir) {
+function extractTextFromPdf(pdfFilePath, outputDir) {
     let dataBuffer = fs.readFileSync(pdfFilePath);
 
     pdf(dataBuffer).then(function(data) {

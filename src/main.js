@@ -1,6 +1,7 @@
 // src/main.js
 import readline from 'readline';
 import openai from './api/openai.js';
+//import { someFunctionFromPdfUtils } from './pdfUtils.js';
 import { positiveKeywords, negativeKeywords } from './utils/keywords.js';
 import functionPositiveResponse from './responses/positiveResponse.js';
 import functionNegativeResponse from './responses/negativeResponse.js';
@@ -36,3 +37,4 @@ rl.question('Ask GPT-3 anything: ', (input) => {
     rl.close();
   });
 });
+
